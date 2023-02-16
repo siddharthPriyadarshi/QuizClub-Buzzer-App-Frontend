@@ -7,11 +7,26 @@ import "../styles/PlayerHome.css";
 import Navbar from "./Navbar";
 
 const PlayerHome = () => {
-  const [teamName, setTeamName] = React.useState({});
+  const [teamName, setTeamName] = React.useState('');
+  const [style, setStyle] = React.useState({});
   const [teamData, setTeamData] = React.useState(null);
+
+
+  React.useEffect(()=>{
+
+  }, [style])
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    if (teamName == null || teamName == "") {
+      alert("Enter name");
+      return;
+    }
+    setStyle({
+      display : "none"
+    })
+
+
     console.log("clicked /add", teamName);
 
     const body = {
@@ -24,16 +39,14 @@ const PlayerHome = () => {
 
     localStorage.setItem("teamId", teamData.id.toString());
 
-    const ele = document.getElementsByClassName("regd-section");
-    ele[0].style.display = "none";
   };
 
   return (
     <div className="container">
       <div className="form-container">
-        <div className="heading">Quizannia</div>
+        <div className="heading">QUIZANNA</div>
         <div className="regd-form">
-          <div className="regd-section">
+          <div style={style} className="regd-section">
             <input
               className="home-input"
               placeholder="Enter name"

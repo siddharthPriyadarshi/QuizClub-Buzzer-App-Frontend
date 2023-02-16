@@ -26,7 +26,7 @@ const AdminDashboard = () => {
   return (
     <div className="admin-container">
       <div className="heading" style={{ height: "20%" }}>
-        Quizannia
+      QUIZANNA
       </div>
       <div className="button-container">
         <button className="buzzer" onClick={clickResetBuzzer}>

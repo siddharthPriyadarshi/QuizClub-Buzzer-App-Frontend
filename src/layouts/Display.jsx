@@ -30,11 +30,7 @@ const Display = () => {
 
   return (
     <>
-      <h1>Display</h1>
-      <div>
-        <span>Team: </span>
-        {displayData}
-      </div>
+    <h1 style={{fontSize : "5rem", marginBottom : "60vh"}}>{displayData}</h1>
     </>
   );
 };
