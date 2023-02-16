@@ -1,0 +1,9 @@
+.admin-container{
+    height: 85vh;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}

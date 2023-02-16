@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #e1eedd;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+}
+
+.form-container {
+  height: 90%;
+}
+
+.heading {
+  font-family: "Merienda", cursive;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.regd-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.home-input {
+  width: 50%;
+  border: none;
+  padding: 0 2%;
+  font-size: 18px;
+  box-sizing: border-box;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.submit-button {
+  margin-top: 15px;
+  border: none;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 50px;
+  background-color: #f0a04b;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .home-input {
+    width: 80%;
+  }
+
+  .heading {
+    font-size: 4rem;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10%;
+  }
+}
