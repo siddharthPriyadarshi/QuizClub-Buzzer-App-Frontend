@@ -1,42 +1,38 @@
-import React from 'react'
-import axios from 'axios'
-import { showDisplay } from '../services/registerTeam'
+import React from "react";
+import axios from "axios";
+import { showDisplay } from "../services/registerTeam";
 
 const Display = () => {
-  const [displayData, setDisplayData] = React.useState('')
+  const [displayData, setDisplayData] = React.useState("");
 
   React.useEffect(() => {
     setInterval(() => {
-      getData()
-      console.log(displayData)
-    }, 500)
-  }, [displayData])
+      getData();
+      console.log(displayData);
+    }, 500);
+  }, [displayData]);
 
   function getData() {
     axios
       .get(
-        'https://683c-2409-40e2-f-920a-a559-cb75-9e1-66e9.in.ngrok.io/api/admin',
+        "http://buzzerapp-env.eba-nsd6mmjj.ap-south-1.elasticbeanstalk.com/api/admin"
       )
       .then(
         (res) => {
-          setDisplayData(res.data)
+          setDisplayData(res.data);
         },
         (err) => {
-          setDisplayData('')
-          console.log('NAME NOT FETCHED')
-        },
-      )
+          setDisplayData("");
+          console.log("NAME NOT FETCHED");
+        }
+      );
   }
 
   return (
     <>
-      <h1>Display</h1>
-      <div>
-        <span>Team: </span>
-        {displayData}
-      </div>
+    <h1 style={{fontSize : "5rem", marginBottom : "60vh"}}>{displayData}</h1>
     </>
-  )
-}
+  );
+};
 
-export default Display
+export default Display;
